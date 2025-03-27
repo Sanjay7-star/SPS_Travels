@@ -1,0 +1,26 @@
+{
+  "name": "mongodb-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "sanjay",
+  "license": "ISC",
+  "description": "Mongodb first nodejs project",
+  "dependencies": {
+    "axios": "^1.8.4",
+    "express": "^4.21.2",
+    "mongodb": "^6.15.0",
+    "mongoose": "^8.12.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanjay7-star/Harry-potter.git#harry-potter"
+  },
+  "bugs": {
+    "url": "https://github.com/Sanjay7-star/Harry-potter/issues"
+  },
+  "homepage": "https://github.com/Sanjay7-star/Harry-potter/tree/harry-potter#readme"
+}
