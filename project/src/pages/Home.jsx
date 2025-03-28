@@ -1,47 +1,46 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Shield, Clock, Award } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Shield, Clock, Award } from "lucide-react";
+import { motion } from "framer-motion"; // ✅ Make sure this is imported
 
-function Home() {
+const Home = () => {
   return (
     <div>
-      <section className="hero-section flex items-center justify-center text-white">
-        <div className="text-center">
-          <h1 className="text-6xl font-bold mb-4">Experience Luxury Driving</h1>
-          <p className="text-xl mb-8">Premium cars for your premium moments</p>
-          <Link
-            to="/fleet"
-            className="bg-secondary text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90"
-          >
-            Explore Our Fleet
-          </Link>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <section
+        className="hero-section relative h-[70vh] flex flex-col items-center justify-center text-white bg-cover bg-center"
+        style={{
+          backgroundImage:
+            "url('https://i.pinimg.com/originals/9e/56/58/9e5658bff0f0a57d77a4077476e1e772.jpg')",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-center mb-12 gradient-text">Why Choose Us</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center p-6 card-hover">
-              <Shield className="w-12 h-12 mx-auto mb-4 text-primary" />
-              <h3 className="text-xl font-semibold mb-2">Premium Insurance</h3>
-              <p className="text-gray-600">Comprehensive coverage for peace of mind</p>
-            </div>
-            <div className="text-center p-6 card-hover">
-              <Clock className="w-12 h-12 mx-auto mb-4 text-primary" />
-              <h3 className="text-xl font-semibold mb-2">24/7 Support</h3>
-              <p className="text-gray-600">Round-the-clock assistance whenever you need</p>
-            </div>
-            <div className="text-center p-6 card-hover">
-              <Award className="w-12 h-12 mx-auto mb-4 text-primary" />
-              <h3 className="text-xl font-semibold mb-2">Best Prices</h3>
-              <p className="text-gray-600">Competitive rates for luxury vehicles</p>
-            </div>
-          </div>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="relative text-center px-6"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+            Rent Your Dream Car
+          </h1>
+          <p className="mt-4 text-lg md:text-xl">
+            Discover luxury and comfort with our premium car rental service.
+          </p>
+          <Link to="/fleet">
+            <motion.button
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="mt-6 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full shadow-lg"
+            >
+              Explore Cars
+            </motion.button>
+          </Link>
+        </motion.div>
       </section>
     </div>
   );
-}
+};
 
 export default Home;

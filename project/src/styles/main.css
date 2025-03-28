@@ -16,178 +16,128 @@ body {
   background-color: var(--background);
 }
 
-/* === HERO Section === */
-.hero-section {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)),
-    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80');
-  background-size: cover;
-  background-position: center;
-  min-height: 80vh;
-}
-
-/* === Fleet Cards === */
-.card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card-hover:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-
-.gradient-text {
-  background: linear-gradient(45deg, var(--primary), var(--secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* New Fleet Styling */
-.fleet-section {
-  background: var(--background);
-}
-
-.fleet-card {
-  border-radius: 0.75rem;
-  overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
-.fleet-card:hover {
-  transform: translateY(-5px) scale(1.02);
-}
-
-.fleet-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.fleet-card .details {
-  padding: 1.5rem;
-}
-
-.fleet-card .details h3 {
-  font-size: 1.25rem;
-  color: var(--primary);
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
-
-.fleet-card .details .category {
-  font-size: 0.85rem;
-  color: var(--secondary);
-  margin-bottom: 0.75rem;
-}
-
-.fleet-card .details .price {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary);
-}
-
-.fleet-card .details .price span {
-  font-size: 0.8rem;
-  color: #666;
-}
-
-.fleet-card .details .book-btn {
-  display: inline-block;
-  background: var(--secondary);
-  color: var(--white);
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  margin-top: 1rem;
-  transition: all 0.3s ease;
-}
-
-.fleet-card .details .book-btn:hover {
-  background: #ffa726;
-  transform: translateY(-2px);
-}
-
-/* === Login & Signup Forms === */
+/* === AUTH FORM (Login & Signup) === */
 .auth-container {
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
   background: linear-gradient(120deg, var(--primary), var(--secondary));
+  padding: 1rem;
 }
 
 .auth-form {
-  background: var(--white);
-  padding: 2rem;
-  border-radius: 0.75rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   width: 100%;
-  max-width: 400px;
-  animation: fadeInUp 0.8s ease forwards;
+  max-width: 420px;
+  animation: fadeInUp 0.8s ease-out forwards;
   opacity: 0;
   transform: translateY(30px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 .auth-form h2 {
-  font-size: 1.75rem;
+  font-size: 2rem;
   margin-bottom: 1.5rem;
   text-align: center;
-  color: var(--primary);
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .auth-form input {
   width: 100%;
   padding: 0.75rem 1rem;
-  border: 1px solid var(--input-border);
+  border: 2px solid transparent;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-size: 1rem;
   transition: all 0.3s ease;
 }
 
+.auth-form input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  transition: transform 0.3s ease-in-out;
+}
+
+.auth-form input:focus::placeholder {
+  transform: translateY(-5px);
+  opacity: 0.7;
+}
+
 .auth-form input:focus {
-  border-color: var(--primary);
-  box-shadow: 0 0 8px rgba(26, 35, 126, 0.3);
+  border-color: var(--secondary);
+  box-shadow: 0 0 12px rgba(255, 111, 0, 0.6);
   outline: none;
+  transform: scale(1.05);
 }
 
 .auth-btn {
   width: 100%;
-  padding: 0.75rem 1rem;
-  background: var(--primary);
+  padding: 0.8rem 1rem;
+  background: var(--secondary);
   color: var(--white);
-  font-weight: 600;
+  font-weight: 700;
   border: none;
   border-radius: 0.5rem;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
 }
 
 .auth-btn:hover {
   background: var(--btn-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(26, 35, 126, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 22px rgba(26, 35, 126, 0.5);
+}
+
+.auth-btn:active {
+  transform: scale(0.95);
 }
 
 .auth-form p {
   text-align: center;
   margin-top: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  color: var(--white);
+  opacity: 0.9;
 }
 
-.auth-form p span {
+.auth-form p a {
   color: var(--secondary);
-  cursor: pointer;
+  font-weight: bold;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.auth-form p span:hover {
+.auth-form p a:hover {
   color: #ffa726;
 }
 
-/* Fade-in animation */
+/* === ANIMATIONS === */
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
