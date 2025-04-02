@@ -22,9 +22,9 @@
     "url": "git+https://github.com/Sanjay7-star/Harry-potter"
   },
   "bugs": {
-    "url": "https://github.com/Sanjay7-star/Harry-potter/issues"
+    "url": "https://github.com/Sanjay7-star/Harry-potter"
   },
-  "homepage": "https://github.com/Sanjay7-star/Harry-potter/tree/harry-potter#readme",
+  "homepage": "https://github.com/Sanjay7-star/Harry-potter#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
