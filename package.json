@@ -19,12 +19,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Sanjay7-star/Harry-potter"
+    "url": "git+https://github.com/Sanjay7-star/SPS_Travels"
   },
   "bugs": {
-    "url": "https://github.com/Sanjay7-star/Harry-potter"
+    "url": "https://github.com/Sanjay7-star/SPS_Travels"
   },
-  "homepage": "https://github.com/Sanjay7-star/Harry-potter#readme",
+  "homepage": "https://github.com/Sanjay7-star/SPS_Travels#readme",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.3",
