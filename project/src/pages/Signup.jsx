@@ -13,6 +13,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       await API.post("/auth/signup", { username, email, password });
+
       alert("Signup successful! Please login.");
       navigate("/login");
     } catch (err) {
